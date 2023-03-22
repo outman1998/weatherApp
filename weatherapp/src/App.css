@@ -52,6 +52,11 @@
     flex-direction: column;
     justify-content: space-between;
   }
+
+  .extra {
+    background-color: #00000017;
+    border-radius: 10px;
+  }
   
   .app .top {
     width: 100%;
@@ -66,6 +71,7 @@
   }
   
   .app .bottom {
+    margin-top: 200px !important;
     display: flex;
     justify-content: space-evenly;
     text-align: center;
@@ -78,6 +84,10 @@
   
   .bold {
     font-weight: 700;
+  }
+
+  .celcius {
+    font-size: 60px;
   }
   
   
@@ -99,4 +109,20 @@
   
   ::placeholder {
     color: #f8f8f8;
+  }
+
+
+
+  @media only screen and (max-width: 600px) {
+    .container {
+      margin: 0px 10px;
+    }
+
+    .bottom > div p {
+      font-size: 18px;
+    }
+
+    .bottom {
+      justify-content: space-between !important;
+    }
   }
