@@ -22,7 +22,11 @@ function App() {
 
   const transformToCelcius = data.main ? (data.main.temp - 32) * 0.5556 + '°C' : null;
 
+  const realCelcius = data.main ? transformToCelcius.slice(0, transformToCelcius.indexOf('.')) + '°C' : null; 
+
   const feelsLike = data.main ? (data.main.feels_like - 32) * 0.5556 + '°C': null;
+
+  const realFeelsLike = data.main ? feelsLike.slice(0, feelsLike.indexOf('.')) : null;
 
   return (
     <div className='app'>
@@ -44,7 +48,7 @@ function App() {
             <p>{data.name}</p>
           </div>
           <div className='temp'>
-            <p>{transformToCelcius}</p>
+            <p>{realCelcius}</p>
           </div>
           <div className='description'>
           {data.weather ? <p>{data.weather[0].main}</p> : null}
@@ -54,7 +58,7 @@ function App() {
         {data.name !== undefined && 
         <div className='bottom'>
           <div className='feels'>
-            {feelsLike}
+            <p className='bold'> {realFeelsLike}°C</p>
             <p>Feels Like</p>
           </div>
           <div className='humidity'>
