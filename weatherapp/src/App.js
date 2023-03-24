@@ -88,7 +88,7 @@ function App() {
       </div>}
 
 
-          {/* <TopCities></TopCities> */}
+          <TopCities></TopCities>
     </div>
   );
 }
