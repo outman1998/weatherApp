@@ -8,7 +8,7 @@ export default function TopCities() {
   const [data, setMyData] = useState({});
 
 
-  const url = "https://api.openweathermap.org/data/2.5/weather?q=tangier&units=imperial&appid=4690ccbd64f571762271e43a61c113f1";
+  const url = "https://api.openweathermap.org/data/2.5/weather?q=tanzania&units=imperial&appid=4690ccbd64f571762271e43a61c113f1";
   
 
   const fetchData = () => {

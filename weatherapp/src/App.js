@@ -88,7 +88,6 @@ function App() {
       </div>}
 
 
-          <TopCities></TopCities>
     </div>
   );
 }
