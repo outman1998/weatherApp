@@ -44,13 +44,12 @@ function App() {
     <div className='app'>
 
       <div className='header'>
-        <p></p>
         <p>Developed by Outman El Mounir</p>
       </div>
 
       {!background &&       <div className='search'>
         <h1>iWeather</h1>
-        <input 
+        <input
         type="text"
         onChange={event => setLocation(event.target.value)}
         placeholder="Type a valid location..."
@@ -61,7 +60,7 @@ function App() {
 
 
       {background && 
-      <div className='container extra'>
+      <div className='displayContainer'>
 
         <div className='top'>
           <div className='location'>
