@@ -44,15 +44,22 @@ function App() {
   return (
     <div className='app'>
 
-      <div className='search'>
+      <div className='header'>
+        <p></p>
+        <p>Developed by Outman El Mounir</p>
+      </div>
+
+      {!background &&       <div className='search'>
+        <h1>iWeather</h1>
         <input 
         type="text"
         onChange={event => setLocation(event.target.value)}
-        placeholder="Enter A City"
+        placeholder="Type a valid location..."
         onKeyPress={searchLocation}
         value={location}
         />
-      </div>
+      </div>}
+
 
       {background && 
       <div className='container extra'>
@@ -64,9 +71,18 @@ function App() {
           <div className='temp'>
             <p className='bold celcius'>{realCelcius}</p>
           </div>
+
           <div className='description'>
           {data.weather ? <p>{data.weather[0].main}</p> : null}
           </div>
+
+          <input className='inputcontainer' 
+        type="text"
+        onChange={event => setLocation(event.target.value)}
+        placeholder="Type a valid location..."
+        onKeyPress={searchLocation}
+        value={location}
+        />
         </div>
 
         {data.name !== undefined && 

@@ -45,12 +45,15 @@
   
   .container {
     max-width: 700px;
-    margin: auto;
     padding: 0 1rem;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 
   .extra {
@@ -96,26 +99,74 @@
   .app .search {
     text-align: center;
     padding: 1rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  ::placeholder {
+    color: rgba(255, 255, 255, 0.048);
+  }
+
+  .search h1 {
+    font-size: 55px;
+    margin-bottom: 5px;
   }
   
   .app input {
-    padding: .7rem 1.5rem;
+    padding: .7rem 2rem .7rem 0.7rem;
     font-size: 1.2rem;
-    border-radius: 25px;
+    border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.8); 
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0);
     color: #f8f8f8f8;
   }
+
+  .inputcontainer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
   
-  ::placeholder {
-    color: #f8f8f8;
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(255, 255, 255, 0.181);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(255, 255, 255, 0.181);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(255, 255, 255, 0.181);
   }
 
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 0px 20px;
+}
+
+.header p:first-child {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+
+.header p {
+  font-size: 17px;
+  color: #98aaa6ac;
+}
 
 
-  @media only screen and (max-width: 600px) {
+
+  @media only screen and (max-width: 720px) {
     .container {
-      margin: 0px 10px;
+      width: 470px;    
     }
 
     .bottom > div p {
